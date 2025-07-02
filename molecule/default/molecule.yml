@@ -1,8 +1,11 @@
 ---
 dependency:
   name: galaxy
+  env:
+    COLLECTIONS_PATHS: /home/podman/.ansible/collections
   options:
     requirements-file: collections.yml
+
 driver:
   name: default
   options:
