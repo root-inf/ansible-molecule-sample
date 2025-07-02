@@ -2,7 +2,7 @@
 dependency:
   name: galaxy
   env:
-    COLLECTIONS_PATHS: /home/podman/.ansible/collections
+    ANSIBLE_COLLECTIONS_PATHS: ./collections
   options:
     requirements-file: collections.yml
 
