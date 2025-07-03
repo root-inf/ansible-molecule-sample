@@ -1,10 +1,9 @@
 ---
-#dependency:
-#  name: galaxy
-#  env:
-#    ANSIBLE_COLLECTIONS_PATHS: ./collections
-#  options:
-#    requirements-file: collections.yml
+dependency:
+  name: galaxy
+  options:
+    requirements-file: collections.yml
+    collections-path: ~/.ansible/collections
 
 driver:
   name: default
