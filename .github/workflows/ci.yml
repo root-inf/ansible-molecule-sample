@@ -39,5 +39,6 @@ jobs:
           podman run --rm \
             -v $PWD:/workdir/roles/setup:Z \
             -w /workdir/roles/setup \
+            --privileged \
             registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:25.2.0-18 \
             molecule test
