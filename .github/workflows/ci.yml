@@ -40,5 +40,8 @@ jobs:
             -v $PWD:/workdir/roles/setup:Z \
             -w /workdir/roles/setup \
             --privileged \
+            -v $XDG_RUNTIME_DIR/podman/podman.sock:/run/podman/podman.sock:Z \
+            -e CONTAINER_HOST=unix://run/podman/podman.sock \
+            --userns=keep-id \
             registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:25.2.0-18 \
             molecule test
